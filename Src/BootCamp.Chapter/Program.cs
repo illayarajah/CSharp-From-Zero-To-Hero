@@ -15,12 +15,13 @@ namespace BootCamp.Chapter
             // - FindRichestPerson
             // - FindMostPoorPerson
 
-            
-            string cleanFile = @"Input\raja2.txt";
 
+            //string cleanFile = @"Input\raja2.txt";
+            //Console.WriteLine("this is a test");
             //FileCleaner.Clean(dirtyFile, cleanFile);
-
-
+            FileCleaner test = new FileCleaner(@"Input\Balances.corrupted", @"Input\raja3.txt");
+            test.Clean();
+            //This is a test comment for git test. 
 
 
 
