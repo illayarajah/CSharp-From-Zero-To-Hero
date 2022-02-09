@@ -15,18 +15,18 @@ namespace BootCamp.Chapter
             // - FindRichestPerson
             // - FindMostPoorPerson
 
-            
-            string cleanFile = @"Input\raja2.txt";
+
+            //string cleanFile = @"Input\raja2.txt";
 
             //FileCleaner.Clean(dirtyFile, cleanFile);
+            FileCleaner test = new FileCleaner(@"Input\Balances.corrupted", @"Input\raja3.txt");
+            test.Clean();
 
 
 
 
 
-
-
-            Console.WriteLine(TextTable.Build(BalanceStats.FindHighestBalanceEver(FileCleaner.CleanFile(cleanFile)), 3));
+            //Console.WriteLine(TextTable.Build(BalanceStats.FindHighestBalanceEver(FileCleaner.CleanFile(cleanFile)), 3));
             //Console.WriteLine(TextTable.Build(BalanceStats.FindPersonWithBiggestLoss(PeoplesBalances.Balances), 3));
             //Console.WriteLine(TextTable.Build(BalanceStats.FindRichestPerson(PeoplesBalances.Balances), 3));
             //Console.WriteLine(TextTable.Build(BalanceStats.FindMostPoorPerson(PeoplesBalances.Balances), 3));
