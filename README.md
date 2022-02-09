@@ -22,6 +22,13 @@ You have an array of strings. Each element in array (a string) follows the same 
 *Name2, balanceY1, balanceY2, balanceY3*...  
 
 So each line is a person with their balance history. The last balance in the array is their current amount of money they have. Currency in the balances is unspecified.  
+All the data is stored in a file.  
+
+However, something went wrong with the file and it got corrupted. It's not said what wrong, so you need to inspect the file and fix it.
+There are 3 files in input folder:
+- "Balances.corrupted"- the file you need to fix  
+- "Balances.clean"- example of how a clean file should look like  
+- "Balances.in"- the file which was used to generate the balances  
 
 However, something went wrong with the file and it got corrupted. It's not said what wrong, so you need to inspect the file and fix it.
 There are 3 files in input folder:
