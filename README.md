@@ -1,20 +1,22 @@
-# C#: From Zero To Hero
-## Chapter 1. Homework 8: Files and errors
+# C#: From Zero To Hero  
+## Chapter 2. Homework 1: Encapsulation and intro to OOP  
 ### Intro
+Object Oriented Programming starts with encapsulation. 
+Encapsulation is 2 things really: 
+1) Grouping of a strongly related data and functions;
+2) Data hiding.  
 
-#### File
-We're all familiar with files- a place where some kind of data is placed. Text, binary, images or video- does not matter much.
-File extension is also irrelevant, as it is a part of a name. It's all about the context and what reads a file.
-Directory is a kind of a file too, which holds other files. File, is the first step to having data persistence beyond in-memory program state.
+OOP evolved from procedural programming. The whole point of it is to **reduce the scope we need to care about** at a time.
+A class is a blueprint for objects and every object has its' own state.
+We, humans, will make mistakes, the more freedom we are given.
+Letting state mutate easilly is the last thing you want, therefore we **hide as much as we can**, 
+so the public doesn't need to be bothered with choices they don't need to make.
+Object state is defined by data. We don't want to recklesly mutate object state, therefore **we shouldn't expose data directly**.
+The purpose of function is to mutate state: either of an object or an external resource.
+**Only functions in a class should be public**, it should be the only way to mutate object's state. 
+We **don't get or set data object an object directly, it is done through getter and setter methods**... 
 
-#### Errors
-We already had to deal with the very first, also the most common error- NullReferenceException.
-Errors is not a bad thing. They are an indicator that something went wrong.
-We shouldn't hide errors and should allow them to happen.
-Don't ignore errors, don't sweep them under a rug, but just don't catch them if you don't handle them explicitly.
-Fail early, fail fast.
-
-### Task 
+### Task
 You have an array of strings. Each element in array (a string) follows the same structure:  
 *Name1, balanceX1, balanceX2, balanceX3*...  
 *Name2, balanceY1, balanceY2, balanceY3*...  
@@ -28,16 +30,21 @@ There are 3 files in input folder:
 - "Balances.clean"- example of how a clean file should look like  
 - "Balances.in"- the file which was used to generate the balances  
 
+However, something went wrong with the file and it got corrupted. It's not said what wrong, so you need to inspect the file and fix it.
+There are 3 files in input folder:
+- "Balances.corrupted"- the file you need to fix  
+- "Balances.clean"- example of how a clean file should look like  
+- "Balances.in"- the file which was used to generate the balances  
+
 After the file is fixed, you need to parse the balances and process them in the following ways:  
 - ***FindHighestBalanceEver***- return name and balance(current) of person who had the biggest historic balance.  
 - ***FindPersonWithBiggestLoss***- return name and loss of a person with a biggest loss (balance change negative).  
 - ***FindRichestPerson***- return name and current money of the richest person.  
 - ***FindMostPoorPerson***- return name and current money of the most poor person.  
 
-Results of each operation have **to be printed using the TextTableBuilder**, using **padding = 3** (so **4 calls** to the TextTableBuilder).
+... and implement the following homework using the introductionary guidelines of OOP.
 
-Note: People and their balances can be found in: **Input/Balances.corrupted** file. Example of clean balances can be found in **Input/Balances.clean** file
-
+Note: If you did Chapter 1 Homework 8, then you can refactor homework to OOP code.  
 
 
  

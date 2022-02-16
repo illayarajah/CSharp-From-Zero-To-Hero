@@ -6,13 +6,62 @@ using System.Text.RegularExpressions;
 
 namespace BootCamp.Chapter
 {
-    public static class FileCleaner
+    public class FileCleaner
     {
         /// <summary>
         /// Cleans up dirtyFileName 
         /// </summary>
         /// <param name="dirtyFile">Dirty file with "_" placed in random places.</param>
         /// <param name="cleanedFile">Cleaned up file without any "_".</param>
+        ///
+
+        private string _dirtyFile;
+        private string _cleanFile;
+
+        
+
+        public FileCleaner(string dirtyFile, string cleanFile)
+        {
+            _dirtyFile = dirtyFile;
+            _cleanFile = cleanFile;                      
+        }
+
+        private string DirtyFile()
+        {
+            return _dirtyFile;
+        }
+
+        private string CleanFile()
+        {
+            return _cleanFile;
+        }
+
+        public void Clean ()
+        {
+            /*
+            StreamReader readFile = new StreamReader(DirtyFile());
+
+            string line;
+            StringBuilder cleanLines = new StringBuilder();
+            
+            while ((line = readFile.ReadLine()) != null)
+            {
+                CheckValid(line);
+            }
+            readFile.Dispose();
+            */
+            string dirtyFileContents = File.ReadAllText(DirtyFile());
+            var cleanedFileContents = dirtyFileContents.Replace("_", "");
+
+            File.WriteAllText(CleanFile(), cleanedFileContents.ToString());
+
+        }
+
+
+
+
+
+        /*
         public static void Clean(string dirtyFile, string cleanedFile)
         {
             
@@ -91,6 +140,6 @@ namespace BootCamp.Chapter
             return result;
         }
 
-
+        */
     }
 }

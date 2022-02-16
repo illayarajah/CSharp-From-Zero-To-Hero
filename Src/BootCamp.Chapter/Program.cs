@@ -27,7 +27,7 @@ namespace BootCamp.Chapter
 
 
 
-            Console.WriteLine(TextTable.Build(BalanceStats.FindHighestBalanceEver(FileCleaner.CleanFile(cleanFile)), 3));
+            //Console.WriteLine(TextTable.Build(BalanceStats.FindHighestBalanceEver(FileCleaner.CleanFile(cleanFile)), 3));
             //Console.WriteLine(TextTable.Build(BalanceStats.FindPersonWithBiggestLoss(PeoplesBalances.Balances), 3));
             //Console.WriteLine(TextTable.Build(BalanceStats.FindRichestPerson(PeoplesBalances.Balances), 3));
             //Console.WriteLine(TextTable.Build(BalanceStats.FindMostPoorPerson(PeoplesBalances.Balances), 3));
